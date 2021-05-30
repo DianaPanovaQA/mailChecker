@@ -31,8 +31,7 @@ def make_dict(page):
     for mail in mails:
         subject = mail["subject"]
         body = page.get_mail_body(mail["view_link"])
-        message_dict[subject] = body
-    message_dict = message_dict
+        message_dict[subject] = body    
     return message_dict
 
 def send_report_and_delete_others(message_dict, page, login):
