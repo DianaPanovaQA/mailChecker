@@ -19,7 +19,7 @@ class MailPage(BasePage):
         for link_element in links_elements_list:
             view_link = link_element.get_attribute("href")
             link_parsed = parse_url(view_link)
-            mail_id = link_parsed.path[12:][:-1]
+            mail_id = link_parsed.path[12:-1]
             data.append({
                 "mail_id": mail_id,
                 "view_link": view_link,
