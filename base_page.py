@@ -34,6 +34,3 @@ class BasePage:
 
     def close(self):
         self.driver.quit()
-
-    def implicitly_wait(self, time):
-        self.driver.implicitly_wait(time)
