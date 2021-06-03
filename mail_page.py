@@ -24,7 +24,7 @@ class MailPage(BasePage):
                 "mail_id": mail_id,
                 "view_link": view_link,
                 "subject": link_element.find_element_by_xpath("./span[@class='sbj']/span").text,
-                "select_checkbox": self.find_element_by_xpath(f"//input[@value='" + mail_id + "'and@type='checkbox']"),
+                "select_checkbox": self.find_element_by_xpath("//input[@value='" + mail_id + "'and@type='checkbox']"),
             })
         return data
 
@@ -34,7 +34,7 @@ class MailPage(BasePage):
         return body.split("\n")[0]
 
     def select_mail(self, mail_id):
-        self.element_click(f"//input[@value='" + mail_id + "'and@type='checkbox']")
+        self.element_click("//input[@value='" + mail_id + "'and@type='checkbox']")
 
     def login(self, login, password):
         self.load_page('https://www.i.ua/')
